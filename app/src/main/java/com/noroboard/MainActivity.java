@@ -12,6 +12,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import androidx.annotation.NonNull;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ import android.view.MenuItem;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -37,10 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int START_LEVEL = 1;
     private int mLevel;
-    private Button mNextAdButton;
+    private ImageButton mNextAdButton;
     private InterstitialAd mInterstitialAd;
     private TextView mLevelTextView;
     private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
         // Load the InterstitialAd and set the adUnitId (defined in values/strings.xml).
         loadInterstitialAd();
 
+        // audio test player
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
+
+
         // Create the next level button, which tries to show an interstitial when clicked.
         mNextAdButton = binding.nextAdButton;
         mNextAdButton.setEnabled(false);
@@ -65,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showInterstitial();
+                mp.start();
+
             }
         });
 
