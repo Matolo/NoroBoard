@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int START_LEVEL = 1;
     private int mLevel;
-    private Button mNextLevelButton;
+    private Button mNextAdButton;
     private InterstitialAd mInterstitialAd;
     private TextView mLevelTextView;
     private ActivityMainBinding binding;
@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         loadInterstitialAd();
 
         // Create the next level button, which tries to show an interstitial when clicked.
-        mNextLevelButton = binding.nextLevelButton;
-        mNextLevelButton.setEnabled(false);
-        mNextLevelButton.setOnClickListener(new View.OnClickListener() {
+        mNextAdButton = binding.nextAdButton;
+        mNextAdButton.setEnabled(false);
+        mNextAdButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showInterstitial();
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                         // The mInterstitialAd reference will be null until
                         // an ad is loaded.
                         mInterstitialAd = interstitialAd;
-                        mNextLevelButton.setEnabled(true);
+                        mNextAdButton.setEnabled(true);
 
                         Toast.makeText(MainActivity.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
                         interstitialAd.setFullScreenContentCallback(
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                         // Handle the error
                         Log.i(TAG, loadAdError.getMessage());
                         mInterstitialAd = null;
-                        mNextLevelButton.setEnabled(true);
+                        mNextAdButton.setEnabled(true);
 
                         String error = String.format(
                                 Locale.ENGLISH,
@@ -164,13 +164,12 @@ public class MainActivity extends AppCompatActivity {
             mInterstitialAd.show(this);
         } else {
             Toast.makeText(this, "Ad did not load", Toast.LENGTH_SHORT).show();
-            goToNextLevel();
+            goToNextAd();
         }
     }
 
-    private void goToNextLevel() {
+    private void goToNextAd() {
         // Show the next level and reload the ad to prepare for the level after.
-        mLevelTextView.setText("Level " + (++mLevel));
         if (mInterstitialAd == null) {
             loadInterstitialAd();
         }
