@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NoroBoard</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="noro_board">NoroBoard</string>
+    <string name="next_ad">Next Ad</string>
+    <!-- -
+        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+</resources>
