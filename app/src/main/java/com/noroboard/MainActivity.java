@@ -25,8 +25,6 @@ import android.widget.ImageButton;
 
 import java.util.Locale;
 
-import android.widget.Toast;
-
 import com.noroboard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ImageButton coeeeButton;
     private ImageButton penazeButton;
+    private ImageButton piceeButton;
+    private ImageButton konomuzButton;
+    private ImageButton jakhoButton;
+    private ImageButton nepijemButton;
+    private ImageButton materinejButton;
     private InterstitialAd mInterstitialAd;
     private ActivityMainBinding binding;
 
@@ -55,7 +58,13 @@ public class MainActivity extends AppCompatActivity {
         loadInterstitialAd();
 
         // audio test player
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.co_jeee);
+        MediaPlayer coe = MediaPlayer.create(getApplicationContext(), R.raw.co_jeee);
+        MediaPlayer penaze = MediaPlayer.create(getApplicationContext(), R.raw.co_nemate_penaze);
+        MediaPlayer picee = MediaPlayer.create(getApplicationContext(), R.raw.do_pice);
+        MediaPlayer konomuz = MediaPlayer.create(getApplicationContext(), R.raw.konomuz);
+        MediaPlayer jakho = MediaPlayer.create(getApplicationContext(), R.raw.jakho);
+        MediaPlayer nepijem = MediaPlayer.create(getApplicationContext(), R.raw.ja_nepijem);
+        MediaPlayer materinej = MediaPlayer.create(getApplicationContext(), R.raw.do_materinej_pice_chodte);
 
 
 
@@ -67,14 +76,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Load the sound file containing "Co jee"
                 showInterstitial();
-                if(!mp.isPlaying()) {
-                    mp.start();
+                if(!coe.isPlaying()) {
+                    coe.start();
                 } else {
-                    mp.pause();
+                    coe.pause();
                 }
             }
         });
-
 
         // Load and play "Co nemate penaze"
         penazeButton = binding.penazeButton;
@@ -84,13 +92,90 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Load the sound file containing "Co jee
                 showInterstitial();
-                if(!mp.isPlaying()) {
-                    mp.start();
+                if(!penaze.isPlaying()) {
+                    penaze.start();
                 } else {
-                    mp.pause();
+                    penaze.pause();
                 }
             }
         });
+
+        // Load and play "Co nemate penaze"
+        piceeButton = binding.piceeButton;
+        piceeButton.setEnabled(false);
+        piceeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!picee.isPlaying()) {
+                    picee.start();
+                } else {
+                    picee.pause();
+                }
+            }
+        });
+
+        konomuzButton = binding.konomuzButton;
+        konomuzButton.setEnabled(false);
+        konomuzButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!konomuz.isPlaying()) {
+                    konomuz.start();
+                } else {
+                    konomuz.pause();
+                }
+            }
+        });
+
+        jakhoButton = binding.jakhoButton;
+        jakhoButton.setEnabled(false);
+        jakhoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!jakho.isPlaying()) {
+                    jakho.start();
+                } else {
+                    jakho.pause();
+                }
+            }
+        });
+
+        nepijemButton = binding.nepijemButton;
+        nepijemButton.setEnabled(false);
+        nepijemButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!nepijem.isPlaying()) {
+                    nepijem.start();
+                } else {
+                    nepijem.pause();
+                }
+            }
+        });
+
+        materinejButton = binding.materinejButton;
+        materinejButton.setEnabled(false);
+        materinejButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!materinej.isPlaying()) {
+                    materinej.start();
+                } else {
+                    materinej.pause();
+                }
+            }
+        });
+
     }
 
     @Override
@@ -125,6 +210,11 @@ public class MainActivity extends AppCompatActivity {
                         mInterstitialAd = interstitialAd;
                         coeeeButton.setEnabled(true);
                         penazeButton.setEnabled(true);
+                        piceeButton.setEnabled(true);
+                        konomuzButton.setEnabled(true);
+                        jakhoButton.setEnabled(true);
+                        nepijemButton.setEnabled(true);
+                        materinejButton.setEnabled(true);
 
                         //Toast.makeText(MainActivity.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
                         interstitialAd.setFullScreenContentCallback(
@@ -162,6 +252,11 @@ public class MainActivity extends AppCompatActivity {
                         mInterstitialAd = null;
                         coeeeButton.setEnabled(true);
                         penazeButton.setEnabled(true);
+                        piceeButton.setEnabled(true);
+                        konomuzButton.setEnabled(true);
+                        jakhoButton.setEnabled(true);
+                        nepijemButton.setEnabled(true);
+                        materinejButton.setEnabled(true);
 
                         String error = String.format(
                                 Locale.ENGLISH,

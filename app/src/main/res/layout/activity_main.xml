@@ -17,42 +17,131 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="@string/noro_board"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="50dp" />
+            android:textSize="50sp" />
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <ImageButton
                 android:id="@+id/coeee_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
 
             <ImageButton
                 android:id="@+id/penaze_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/picee_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/konomuz_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/jakho_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/nepijem_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/materinej_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/coeee_button"
+                android:gravity="center"
                 android:text="@string/coeee" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/coeee_button"
+                android:gravity="center"
                 android:text="@string/penaze" />
+
+            <TextView
+                android:id="@+id/Picee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coeee_button"
+                android:gravity="center"
+                android:text="Picee" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coeee_button"
+                android:gravity="center"
+                android:text="Konmuz" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coeee_button"
+                android:gravity="center"
+                android:text="Jakho" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coeee_button"
+                android:gravity="center"
+                android:text="Nepijem" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coeee_button"
+                android:gravity="center"
+                android:text="Materinej" />
         </TableRow>
 
         <TableRow
