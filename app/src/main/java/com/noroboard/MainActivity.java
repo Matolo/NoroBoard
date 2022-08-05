@@ -21,9 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -33,15 +31,10 @@ import com.noroboard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     // Remove the below line after defining your own ad unit ID.
-    private static final String TOAST_TEXT = "Test ads are being shown. "
-            + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
     private static final String TAG = "MainActivity";
-
-    private static final int START_LEVEL = 1;
-    private int mLevel;
-    private ImageButton mNextAdButton;
+    private ImageButton coeeeButton;
+    private ImageButton penazeButton;
     private InterstitialAd mInterstitialAd;
-    private TextView mLevelTextView;
     private ActivityMainBinding binding;
 
 
@@ -65,24 +58,42 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
 
 
-        // Create the next level button, which tries to show an interstitial when clicked.
-        mNextAdButton = binding.nextAdButton;
-        mNextAdButton.setEnabled(false);
-        mNextAdButton.setOnClickListener(new View.OnClickListener() {
+
+        // Create the coeee button which plays wonderful sound of Noro and also plays ad.
+        coeeeButton = binding.coeeeButton;
+        coeeeButton.setEnabled(false);
+        coeeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Load the sound file containing "Co jee"
+                MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
                 showInterstitial();
-                mp.start();
-
+                if(!mp.isPlaying()) {
+                    mp.start();
+                } else {
+                    mp.pause();
+                }
             }
         });
 
-        // Create the text view to show the level number.
-        //mLevelTextView = binding.level;
-        mLevel = START_LEVEL;
 
-        // Toasts the test ad message on the screen. Remove this after defining your own ad unit ID.
-        Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show();
+        // Load and play "Co nemate penaze"
+        penazeButton = binding.penazeButton;
+        penazeButton.setEnabled(false);
+        penazeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee"
+                MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
+                showInterstitial();
+                if(!mp.isPlaying()) {
+                    mp.start();
+                } else {
+                    mp.pause();
+                }
+            }
+        });
+
     }
 
     @Override
@@ -115,9 +126,9 @@ public class MainActivity extends AppCompatActivity {
                         // The mInterstitialAd reference will be null until
                         // an ad is loaded.
                         mInterstitialAd = interstitialAd;
-                        mNextAdButton.setEnabled(true);
+                        coeeeButton.setEnabled(true);
 
-                        Toast.makeText(MainActivity.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
                         interstitialAd.setFullScreenContentCallback(
                                 new FullScreenContentCallback() {
                                     @Override
@@ -151,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                         // Handle the error
                         Log.i(TAG, loadAdError.getMessage());
                         mInterstitialAd = null;
-                        mNextAdButton.setEnabled(true);
+                        coeeeButton.setEnabled(true);
 
                         String error = String.format(
                                 Locale.ENGLISH,
@@ -159,10 +170,6 @@ public class MainActivity extends AppCompatActivity {
                                 loadAdError.getDomain(),
                                 loadAdError.getCode(),
                                 loadAdError.getMessage());
-                        Toast.makeText(
-                                        MainActivity.this,
-                                        "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT)
-                                .show();
                     }
                 });
     }
@@ -172,7 +179,6 @@ public class MainActivity extends AppCompatActivity {
         if (mInterstitialAd != null) {
             mInterstitialAd.show(this);
         } else {
-            Toast.makeText(this, "Ad did not load", Toast.LENGTH_SHORT).show();
             goToNextAd();
         }
     }
