@@ -38,14 +38,13 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton nepijemButton;
     private ImageButton materinejButton;
     private InterstitialAd mInterstitialAd;
-    private ActivityMainBinding binding;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.noroboard.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -175,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     @Override
