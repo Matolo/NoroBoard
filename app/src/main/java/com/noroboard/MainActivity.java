@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         loadInterstitialAd();
 
         // audio test player
-        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.co_jeee);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.co_jeee);
 
 
 
@@ -82,8 +82,7 @@ public class MainActivity extends AppCompatActivity {
         penazeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Load the sound file containing "Co jee"
-                MediaPlayer.create(getApplicationContext(), R.raw.co_nemate_penaze);
+                // Load the sound file containing "Co jee
                 showInterstitial();
                 if(!mp.isPlaying()) {
                     mp.start();
@@ -92,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     @Override
@@ -126,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                         // an ad is loaded.
                         mInterstitialAd = interstitialAd;
                         coeeeButton.setEnabled(true);
+                        penazeButton.setEnabled(true);
 
                         //Toast.makeText(MainActivity.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
                         interstitialAd.setFullScreenContentCallback(
@@ -162,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.i(TAG, loadAdError.getMessage());
                         mInterstitialAd = null;
                         coeeeButton.setEnabled(true);
+                        penazeButton.setEnabled(true);
 
                         String error = String.format(
                                 Locale.ENGLISH,
