@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         loadInterstitialAd();
 
         // audio test player
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
+        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.co_jeee);
 
 
 
@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Load the sound file containing "Co jee"
-                MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
                 showInterstitial();
                 if(!mp.isPlaying()) {
                     mp.start();
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Load the sound file containing "Co jee"
-                MediaPlayer.create(getApplicationContext(), R.raw.cojehej);
+                MediaPlayer.create(getApplicationContext(), R.raw.co_nemate_penaze);
                 showInterstitial();
                 if(!mp.isPlaying()) {
                     mp.start();
