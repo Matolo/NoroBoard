@@ -30,6 +30,7 @@ import com.noroboard.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     // Remove the below line after defining your own ad unit ID.
     private static final String TAG = "MainActivity";
+    // Row #1
     private ImageButton coeeeButton;
     private ImageButton penazeButton;
     private ImageButton piceeButton;
@@ -38,7 +39,19 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton nepijemButton;
     private ImageButton materinejButton;
     private InterstitialAd mInterstitialAd;
-
+    // Row #2
+    private ImageButton abyIsliButton;
+    private ImageButton coSiButton;
+    private ImageButton jebalButton;
+    private ImageButton penazeInacButton;
+    private ImageButton noroButton;
+    private ImageButton patdesiatpatButton;
+    private ImageButton prejebanyButton;
+    // Row #3
+    private ImageButton nechPice;
+    private ImageButton nechRozidu;
+    private ImageButton rozidteButton;
+    private ImageButton dluzisPenizeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +69,46 @@ public class MainActivity extends AppCompatActivity {
         // Load the InterstitialAd and set the adUnitId (defined in values/strings.xml).
         loadInterstitialAd();
 
-        // audio test player
+        //Buttons Row #1
+        coeeeButton = binding.coeeButton;
+        coeeeButton.setEnabled(false);
+        penazeButton = binding.penazeButton;
+        penazeButton.setEnabled(false);
+        piceeButton = binding.piceeButton;
+        piceeButton.setEnabled(false);
+        konomuzButton = binding.konomuzButton;
+        konomuzButton.setEnabled(false);
+        jakhoButton = binding.jakhoButton;
+        jakhoButton.setEnabled(false);
+        nepijemButton = binding.nepijemButton;
+        nepijemButton.setEnabled(false);
+        materinejButton = binding.materinejButton;
+        materinejButton.setEnabled(false);
+        //Buttons Row #2
+        abyIsliButton = binding.isliButton;
+        abyIsliButton.setEnabled(false);
+        coSiButton = binding.povedalButton;
+        coSiButton.setEnabled(false);
+        jebalButton = binding.jebalButton;
+        jebalButton.setEnabled(false);
+        penazeInacButton = binding.inacButton;
+        penazeInacButton.setEnabled(false);
+        noroButton = binding.noroButton;
+        noroButton.setEnabled(false);
+        patdesiatpatButton = binding.patdesiatpatButton;
+        patdesiatpatButton.setEnabled(false);
+        prejebanyButton = binding.prejebanyButton;
+        prejebanyButton.setEnabled(false);
+        //Buttons Row #3
+        nechPice = binding.nechPiceButton;
+        nechPice.setEnabled(false);
+        nechRozidu = binding.nechRoziduButton;
+        nechRozidu.setEnabled(false);
+        rozidteButton = binding.rozidteButton;
+        rozidteButton.setEnabled(false);
+        dluzisPenizeButton = binding.dluzisPenizeButton;
+        dluzisPenizeButton.setEnabled(false);
+        // Row 1
         MediaPlayer coe = MediaPlayer.create(getApplicationContext(), R.raw.co_jeee);
         MediaPlayer penaze = MediaPlayer.create(getApplicationContext(), R.raw.co_nemate_penaze);
         MediaPlayer picee = MediaPlayer.create(getApplicationContext(), R.raw.do_pice);
@@ -65,11 +117,22 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer nepijem = MediaPlayer.create(getApplicationContext(), R.raw.ja_nepijem);
         MediaPlayer materinej = MediaPlayer.create(getApplicationContext(), R.raw.do_materinej_pice_chodte);
 
+        // Row 2
+        MediaPlayer aby_ste_isli = MediaPlayer.create(getApplicationContext(), R.raw.aby_ste_isli_setci_do);
+        MediaPlayer co_si_povedal = MediaPlayer.create(getApplicationContext(), R.raw.co_si_povedal);
+        MediaPlayer jebal_by_si = MediaPlayer.create(getApplicationContext(), R.raw.jebal_by_si);
+        MediaPlayer nemam_penaze_inac = MediaPlayer.create(getApplicationContext(), R.raw.nemam_penaze_inac);
+        MediaPlayer norbert_kanalos = MediaPlayer.create(getApplicationContext(), R.raw.norbert_kanalos);
+        MediaPlayer patdesiat_pat = MediaPlayer.create(getApplicationContext(), R.raw.patdesiatpatpatdesiat_norbert_kanalos);
+        MediaPlayer prejebany = MediaPlayer.create(getApplicationContext(), R.raw.prejebany);
+
+        //Row 3
+        MediaPlayer povedz_im_nech_pice = MediaPlayer.create(getApplicationContext(), R.raw.povedz_im_nech_idu_dopice);
+        MediaPlayer povedz_im_nech_rozidu = MediaPlayer.create(getApplicationContext(), R.raw.povedz_im_nech_sa_rozidu);
+        MediaPlayer rozidte_sa = MediaPlayer.create(getApplicationContext(), R.raw.rozidte_sa_vojak);
+        MediaPlayer dluzis_penaze = MediaPlayer.create(getApplicationContext(), R.raw.ty_mi_dluzis_evra);
 
 
-        // Create the coeee button which plays wonderful sound of Noro and also plays ad.
-        coeeeButton = binding.coeeeButton;
-        coeeeButton.setEnabled(false);
         coeeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,9 +146,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Load and play "Co nemate penaze"
-        penazeButton = binding.penazeButton;
-        penazeButton.setEnabled(false);
         penazeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,9 +159,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Load and play "Co nemate penaze"
-        piceeButton = binding.piceeButton;
-        piceeButton.setEnabled(false);
         piceeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,8 +172,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        konomuzButton = binding.konomuzButton;
-        konomuzButton.setEnabled(false);
         konomuzButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,8 +185,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        jakhoButton = binding.jakhoButton;
-        jakhoButton.setEnabled(false);
         jakhoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,8 +198,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        nepijemButton = binding.nepijemButton;
-        nepijemButton.setEnabled(false);
         nepijemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -160,8 +211,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        materinejButton = binding.materinejButton;
-        materinejButton.setEnabled(false);
         materinejButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -174,7 +223,149 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        abyIsliButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee"
+                showInterstitial();
+                if(!aby_ste_isli.isPlaying()) {
+                    aby_ste_isli.start();
+                } else {
+                    aby_ste_isli.pause();
+                }
+            }
+        });
+
+        coSiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!co_si_povedal.isPlaying()) {
+                    co_si_povedal.start();
+                } else {
+                    co_si_povedal.pause();
+                }
+            }
+        });
+
+        jebalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!jebal_by_si.isPlaying()) {
+                    jebal_by_si.start();
+                } else {
+                    jebal_by_si.pause();
+                }
+            }
+        });
+
+        penazeInacButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!nemam_penaze_inac.isPlaying()) {
+                    nemam_penaze_inac.start();
+                } else {
+                    nemam_penaze_inac.pause();
+                }
+            }
+        });
+
+        noroButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!norbert_kanalos.isPlaying()) {
+                    norbert_kanalos.start();
+                } else {
+                    norbert_kanalos.pause();
+                }
+            }
+        });
+
+        patdesiatpatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!patdesiat_pat.isPlaying()) {
+                    patdesiat_pat.start();
+                } else {
+                    patdesiat_pat.pause();
+                }
+            }
+        });
+
+        prejebanyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!prejebany.isPlaying()) {
+                    prejebany.start();
+                } else {
+                    prejebany.pause();
+                }
+            }
+        });
+        nechPice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!povedz_im_nech_pice.isPlaying()) {
+                    povedz_im_nech_pice.start();
+                } else {
+                    povedz_im_nech_pice.pause();
+                }
+            }
+        });
+        nechRozidu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!povedz_im_nech_rozidu.isPlaying()) {
+                    povedz_im_nech_rozidu.start();
+                } else {
+                    povedz_im_nech_rozidu.pause();
+                }
+            }
+        });
+        rozidteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!rozidte_sa.isPlaying()) {
+                    rozidte_sa.start();
+                } else {
+                    rozidte_sa.pause();
+                }
+            }
+        });
+        dluzisPenizeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Load the sound file containing "Co jee
+                showInterstitial();
+                if(!dluzis_penaze.isPlaying()) {
+                    dluzis_penaze.start();
+                } else {
+                    dluzis_penaze.pause();
+                }
+            }
+        });
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -213,6 +404,19 @@ public class MainActivity extends AppCompatActivity {
                         jakhoButton.setEnabled(true);
                         nepijemButton.setEnabled(true);
                         materinejButton.setEnabled(true);
+
+                        abyIsliButton.setEnabled(true);
+                        coSiButton.setEnabled(true);
+                        jebalButton.setEnabled(true);
+                        penazeInacButton.setEnabled(true);
+                        noroButton.setEnabled(true);
+                        patdesiatpatButton.setEnabled(true);
+                        prejebanyButton.setEnabled(true);
+
+                        nechPice.setEnabled(true);
+                        nechRozidu.setEnabled(true);
+                        rozidteButton.setEnabled(true);
+                        dluzisPenizeButton.setEnabled(true);
 
                         //Toast.makeText(MainActivity.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
                         interstitialAd.setFullScreenContentCallback(
@@ -255,6 +459,19 @@ public class MainActivity extends AppCompatActivity {
                         jakhoButton.setEnabled(true);
                         nepijemButton.setEnabled(true);
                         materinejButton.setEnabled(true);
+
+                        abyIsliButton.setEnabled(true);
+                        coSiButton.setEnabled(true);
+                        jebalButton.setEnabled(true);
+                        penazeInacButton.setEnabled(true);
+                        noroButton.setEnabled(true);
+                        patdesiatpatButton.setEnabled(true);
+                        prejebanyButton.setEnabled(true);
+
+                        nechPice.setEnabled(true);
+                        nechRozidu.setEnabled(true);
+                        rozidteButton.setEnabled(true);
+                        dluzisPenizeButton.setEnabled(true);
 
                         String error = String.format(
                                 Locale.ENGLISH,

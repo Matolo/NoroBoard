@@ -12,7 +12,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/app_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -23,12 +22,12 @@
             android:textSize="50sp" />
 
         <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/coeee_button"
+                android:id="@+id/coeeButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -36,7 +35,7 @@
                 tools:foregroundGravity="center" />
 
             <ImageButton
-                android:id="@+id/penaze_button"
+                android:id="@+id/penazeButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -44,7 +43,7 @@
                 tools:foregroundGravity="center" />
 
             <ImageButton
-                android:id="@+id/picee_button"
+                android:id="@+id/piceeButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -52,7 +51,7 @@
                 tools:foregroundGravity="center" />
 
             <ImageButton
-                android:id="@+id/konomuz_button"
+                android:id="@+id/konomuzButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -60,7 +59,7 @@
                 tools:foregroundGravity="center" />
 
             <ImageButton
-                android:id="@+id/jakho_button"
+                android:id="@+id/jakhoButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -68,7 +67,7 @@
                 tools:foregroundGravity="center" />
 
             <ImageButton
-                android:id="@+id/nepijem_button"
+                android:id="@+id/nepijemButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -76,7 +75,7 @@
                 tools:foregroundGravity="center" />
 
             <ImageButton
-                android:id="@+id/materinej_button"
+                android:id="@+id/materinejButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -92,65 +91,244 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="@string/coeee" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="@string/penaze" />
 
             <TextView
-                android:id="@+id/Picee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="Picee" />
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="Konmuz" />
 
             <TextView
-                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="Jakho" />
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="Nepijem" />
 
             <TextView
-                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/coeee_button"
+                android:layout_below="@+id/povedz_im_nech_pice"
                 android:gravity="center"
                 android:text="Materinej" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/isliButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/povedalButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/jebalButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/inacButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/noroButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/patdesiatpatButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/prejebanyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Aby" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Co si" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Jebal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Inac" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Noro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="55" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="prejeba" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/nechPiceButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/nechRoziduButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/rozidteButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+            <ImageButton
+                android:id="@+id/dluzisPenizeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                tools:foregroundGravity="center" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="NechP" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="NechR" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Rozidte" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/povedz_im_nech_pice"
+                android:gravity="center"
+                android:text="Penize" />
+
+        </TableRow>
+
     </TableLayout>
 
 </RelativeLayout>
