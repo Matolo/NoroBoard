@@ -2,6 +2,8 @@ package com.noroboard;
 
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
@@ -59,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
         com.noroboard.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        AdView bAdView = findViewById(R.id.bannerAdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        bAdView.loadAd(adRequest);
+
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
